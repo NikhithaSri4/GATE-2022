@@ -140,10 +140,11 @@ A $1\text{kHz}$ sine wave generator having an internal resistance of $50 \ohm$  
 
 \begin{align}
 V_o &= \frac{X_c}{\sqrt{R^2 + X_c^2}}\cdot V_i \\
-\implies 8V_p &= \frac{X_c}{\sqrt{50^2 + X_c^2}}\cdot 10V_p \\
-\implies X_c^2 - 1.5625X_c^2 + 2500 &= 0 \\
-\implies X_c &= \frac{200}{3} \\
-\implies C &= \frac{1}{2\pi\cdot 10^3\cdot \frac{200}{3}} \\
+\implies 8V_p &= \frac{\frac{1}{j\omega C}}{\sqrt{R^2 + \brak{\frac{1}{j\omega C}}^2}}\cdot 10V_p \\
+\implies \frac{64}{100} &= \frac{1}{1 - \omega^2R^2C^2}\\
+\implies \omega^2R^2C^2 &= \frac{-9}{16} \\
+\implies C &= \frac{3}{4\cdot R\cdot 2\pi f} \\
+\implies C &= \frac{3}{4\cdot 50 \cdot 2\pi \cdot 10^3} \\
 \implies C &= 2.387 \mu F
 \end{align}
 
